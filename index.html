@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pritesh Sahu — Video & Post Production</title>
+  <meta name="description" content="Portfolio of Pritesh Sahu — Video Editor and Post Production Producer.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f5;
+      color: #111;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+      padding: 35px 5vw 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      opacity: 0.5;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 100px 5vw 80px;
+      max-width: 1200px;
+    }
+
+    .intro h1 {
+      font-size: clamp(50px, 8vw, 110px);
+      line-height: 0.95;
+      letter-spacing: -5px;
+      font-weight: 700;
+      max-width: 1000px;
+    }
+
+    .intro p {
+      margin-top: 35px;
+      max-width: 600px;
+      font-size: 19px;
+      color: #555;
+    }
+
+    /* WORK */
+
+    .work {
+      padding: 20px 5vw 100px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      color: #666;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 45px 25px;
+    }
+
+    .project {
+      display: block;
+    }
+
+    .media {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: #ddd;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .project:hover .media img {
+      transform: scale(1.03);
+    }
+
+    .media iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #deded9;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .project-info {
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .project-type {
+      font-size: 13px;
+      color: #777;
+      white-space: nowrap;
+    }
+
+    .project-description {
+      margin-top: 6px;
+      max-width: 600px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* FEATURED PROJECT */
+
+    .featured {
+      grid-column: 1 / -1;
+    }
+
+    .featured .media {
+      aspect-ratio: 2 / 1;
+    }
+
+    /* ABOUT */
+
+    .about {
+      border-top: 1px solid #ccc;
+      margin: 0 5vw;
+      padding: 100px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .about h2 {
+      font-size: clamp(40px, 6vw, 80px);
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    .about-text {
+      max-width: 600px;
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #111;
+      color: white;
+      padding: 100px 5vw;
+    }
+
+    .contact h2 {
+      font-size: clamp(50px, 9vw, 120px);
+      line-height: 0.9;
+      letter-spacing: -5px;
+      margin-bottom: 50px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      font-size: 16px;
+    }
+
+    .contact-links a {
+      border-bottom: 1px solid #777;
+      padding-bottom: 5px;
+    }
+
+    .contact-links a:hover {
+      border-color: white;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #111;
+      color: #777;
+      padding: 30px 5vw;
+      font-size: 12px;
+      border-top: 1px solid #333;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 25px 20px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .intro {
+        padding: 80px 20px 60px;
+      }
+
+      .intro h1 {
+        letter-spacing: -3px;
+      }
+
+      .intro p {
+        font-size: 17px;
+      }
+
+      .work {
+        padding: 20px 20px 70px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .featured {
+        grid-column: auto;
+      }
+
+      .featured .media {
+        aspect-ratio: 16 / 10;
+      }
+
+      .project-info {
+        display: block;
+      }
+
+      .project-type {
+        margin-top: 4px;
+      }
+
+      .about {
+        margin: 0 20px;
+        padding: 70px 0;
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .contact {
+        padding: 70px 20px;
+      }
+
+      .contact h2 {
+        letter-spacing: -3px;
+      }
+
+      .contact-links {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      footer {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="logo">PRITESH SAHU</div>
+
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <h1>
+      Video.<br>
+      Post Production.<br>
+      Storytelling.
+    </h1>
+
+    <p>
+      Video Editor and Post Production Producer with 10+ years of experience
+      creating and managing video content, editorial workflows and
+      post-production teams.
+    </p>
+
+  </section>
+
+
+  <!-- WORK -->
+
+  <section class="work" id="work">
+
+    <div class="section-title">Selected Work</div>
+
+    <div class="grid">
+
+
+      <!-- PROJECT 1 -->
+
+      <a class="project featured" href="#" target="_blank">
+
+        <div class="media">
+
+          <!-- REPLACE THIS WITH YOUR VIDEO EMBED -->
+
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Project 1"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+        <div class="project-info">
+
+          <div>
+            <div class="project-title">
+              Project One
+            </div>
+
+            <div class="project-description">
+              Add a short description of the project, your role and what
+              you worked on.
+            </div>
+          </div>
+
+          <div class="project-type">
+            Video Editing
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- PROJECT 2 -->
+
+      <a class="project" href="#" target="_blank">
+
+        <div class="media">
+
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Project 2"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+        <div class="project-info">
+
+          <div>
+            <div class="project-title">
+              Project Two
+            </div>
+
+            <div class="project-description">
+              Short project description.
+            </div>
+          </div>
+
+          <div class="project-type">
+            Post Production
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- PROJECT 3 -->
+
+      <a class="project" href="#" target="_blank">
+
+        <div class="media">
+
+          <div class="placeholder">
+            IMAGE / PROJECT 3
+          </div>
+
+        </div>
+
+        <div class="project-info">
+
+          <div>
+            <div class="project-title">
+              Project Three
+            </div>
+
+            <div class="project-description">
+              Short project description.
+            </div>
+          </div>
+
+          <div class="project-type">
+            Motion / Design
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- PROJECT 4 -->
+
+      <a class="project" href="#" target="_blank">
+
+        <div class="media">
+
+          <div class="placeholder">
+            IMAGE / PROJECT 4
+          </div>
+
+        </div>
+
+        <div class="project-info">
+
+          <div>
+            <div class="project-title">
+              Project Four
+            </div>
+
+            <div class="project-description">
+              Short project description.
+            </div>
+          </div>
+
+          <div class="project-type">
+            Video
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- PROJECT 5 -->
+
+      <a class="project" href="#" target="_blank">
+
+        <div class="media">
+
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Project 5"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+        <div class="project-info">
+
+          <div>
+            <div class="project-title">
+              Project Five
+            </div>
+
+            <div class="project-description">
+              Short project description.
+            </div>
+          </div>
+
+          <div class="project-type">
+            Editing
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- PROJECT 6 -->
+
+      <a class="project" href="#" target="_blank">
+
+        <div class="media">
+
+          <div class="placeholder">
+            IMAGE / PROJECT 6
+          </div>
+
+        </div>
+
+        <div class="project-info">
+
+          <div>
+            <div class="project-title">
+              Project Six
+            </div>
+
+            <div class="project-description">
+              Short project description.
+            </div>
+          </div>
+
+          <div class="project-type">
+            Post Production
+          </div>
+
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <h2>
+      A little<br>
+      about me.
+    </h2>
+
+    <div class="about-text">
+
+      <p>
+        I'm Pritesh Sahu, a video editor and post-production professional
+        focused on turning complex ideas into clear and engaging visual
+        stories.
+      </p>
+
+      <br>
+
+      <p>
+        My experience includes educational content, research videos,
+        corporate content and large-scale post-production workflows.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <h2>
+      Let's<br>
+      work together.
+    </h2>
+
+    <div class="contact-links">
+
+      <a href="mailto:YOUR_EMAIL@gmail.com">
+        Email
+      </a>
+
+      <a href="https://www.linkedin.com/" target="_blank">
+        LinkedIn
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Pritesh Sahu
+  </footer>
+
+
+</body>
+</html>
