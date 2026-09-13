@@ -3,37 +3,534 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pritesh Sahu — Video & Post Production</title>
-<meta name="description" content="Pritesh Sahu — Video Editor and Post Production Producer portfolio.">
+
+<title>Pritesh Sahu — Video Editor & Post Production Producer</title>
+
 <style>
-:root{--bg:#f4f2ee;--text:#111;--muted:#6f6b64;--line:#d8d4cd;--card:#ebe8e2}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
-header{padding:28px 5vw;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(244,242,238,.92);backdrop-filter:blur(12px);z-index:10}.brand{font-weight:700;font-size:17px;letter-spacing:-.3px}.nav{display:flex;gap:24px;font-size:13px}.nav a:hover{opacity:.5}
-.hero{padding:90px 5vw 75px;display:grid;grid-template-columns:1.4fr .6fr;gap:50px;align-items:end}.hero h1{font-size:clamp(56px,9vw,130px);line-height:.86;letter-spacing:-7px;margin:0;max-width:1000px}.hero-copy{font-size:16px;line-height:1.6;color:var(--muted);max-width:420px;padding-bottom:5px}
-.work{padding:0 5vw 110px}.label{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:24px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:52px 26px}.project{display:block}.media{aspect-ratio:16/10;overflow:hidden;background:var(--card);position:relative}.media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}.project:hover .media img{transform:scale(1.025)}.play{position:absolute;left:18px;bottom:18px;background:rgba(17,17,17,.9);color:#fff;border-radius:50%;width:48px;height:48px;display:grid;place-items:center;font-size:17px}.info{padding-top:15px;display:flex;justify-content:space-between;gap:20px}.title{font-size:18px;font-weight:600}.type{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);white-space:nowrap}.desc{margin-top:5px;font-size:13px;color:var(--muted);line-height:1.5;max-width:620px}.featured{grid-column:1/-1}.featured .media{aspect-ratio:2/1}
-.about{margin:0 5vw;padding:85px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:60px}.about h2{font-size:clamp(42px,6vw,82px);line-height:.9;letter-spacing:-4px;margin:0}.about p{font-size:17px;line-height:1.7;color:var(--muted);max-width:600px;margin:0 0 20px}
-.contact{margin-top:0;padding:95px 5vw 45px;background:#111;color:#fff}.contact h2{font-size:clamp(54px,9vw,125px);line-height:.84;letter-spacing:-6px;margin:0 0 55px}.links{display:flex;gap:28px;flex-wrap:wrap}.links a{font-size:14px;border-bottom:1px solid #777;padding-bottom:6px}.links a:hover{border-color:#fff}footer{background:#111;color:#777;padding:25px 5vw;font-size:11px;border-top:1px solid #333}
-@media(max-width:700px){header{padding:20px}.nav{gap:14px}.hero{padding:65px 20px 55px;display:block}.hero h1{letter-spacing:-4px}.hero-copy{margin-top:30px}.work{padding:0 20px 75px}.grid{grid-template-columns:1fr;gap:40px}.featured{grid-column:auto}.featured .media{aspect-ratio:16/10}.info{display:block}.type{margin-top:7px}.about{margin:0 20px;padding:65px 0;grid-template-columns:1fr;gap:35px}.contact{padding:70px 20px 35px}.contact h2{letter-spacing:-4px}.links{flex-direction:column;gap:18px}footer{padding:22px 20px}}
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f5f2;
+  color:#111;
+}
+
+a{color:inherit;text-decoration:none}
+
+header{
+  padding:28px 4vw;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:-.4px;
+}
+
+nav{
+  display:flex;
+  gap:24px;
+  font-size:13px;
+}
+
+nav a:hover{opacity:.45}
+
+.hero{
+  padding:100px 4vw 110px;
+  max-width:1250px;
+}
+
+.hero h1{
+  font-size:clamp(55px,8.5vw,125px);
+  line-height:.88;
+  letter-spacing:-7px;
+  max-width:1100px;
+}
+
+.hero p{
+  margin-top:42px;
+  max-width:650px;
+  font-size:18px;
+  line-height:1.6;
+  color:#666;
+}
+
+.work{
+  padding:0 4vw 120px;
+}
+
+.label{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  color:#777;
+  margin-bottom:28px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:55px 24px;
+}
+
+.card{
+  display:block;
+}
+
+.media{
+  width:100%;
+  aspect-ratio:16/10;
+  background:#ddd;
+  overflow:hidden;
+  position:relative;
+}
+
+.media iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+.placeholder{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  color:#777;
+}
+
+.info{
+  padding-top:15px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.title{
+  font-size:17px;
+  font-weight:600;
+}
+
+.type{
+  font-size:12px;
+  color:#777;
+  white-space:nowrap;
+}
+
+.description{
+  margin-top:6px;
+  font-size:13px;
+  color:#777;
+  max-width:600px;
+}
+
+.featured{
+  grid-column:1/-1;
+}
+
+.featured .media{
+  aspect-ratio:2/1;
+}
+
+.about{
+  margin:0 4vw;
+  padding:100px 0;
+  border-top:1px solid #ccc;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+.about h2{
+  font-size:clamp(45px,6vw,85px);
+  line-height:.9;
+  letter-spacing:-4px;
+}
+
+.about p{
+  max-width:600px;
+  font-size:17px;
+  line-height:1.7;
+  color:#666;
+}
+
+.contact{
+  background:#111;
+  color:white;
+  padding:100px 4vw;
+}
+
+.contact h2{
+  font-size:clamp(55px,9vw,125px);
+  line-height:.88;
+  letter-spacing:-7px;
+  margin-bottom:55px;
+}
+
+.links{
+  display:flex;
+  gap:35px;
+  flex-wrap:wrap;
+}
+
+.links a{
+  font-size:14px;
+  border-bottom:1px solid #666;
+  padding-bottom:5px;
+}
+
+.links a:hover{
+  border-color:white;
+}
+
+footer{
+  background:#111;
+  color:#666;
+  padding:25px 4vw;
+  border-top:1px solid #333;
+  font-size:11px;
+}
+
+@media(max-width:700px){
+
+  header{
+    padding:22px 20px;
+  }
+
+  nav{
+    gap:14px;
+  }
+
+  .hero{
+    padding:70px 20px 80px;
+  }
+
+  .hero h1{
+    letter-spacing:-4px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .work{
+    padding:0 20px 80px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+
+  .featured{
+    grid-column:auto;
+  }
+
+  .featured .media{
+    aspect-ratio:16/10;
+  }
+
+  .info{
+    display:block;
+  }
+
+  .type{
+    margin-top:5px;
+  }
+
+  .about{
+    margin:0 20px;
+    padding:75px 0;
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .contact{
+    padding:75px 20px;
+  }
+
+  .contact h2{
+    letter-spacing:-4px;
+  }
+
+  .links{
+    flex-direction:column;
+    gap:18px;
+  }
+
+  footer{
+    padding:22px 20px;
+  }
+}
 </style>
 </head>
+
 <body>
-<header><a class="brand" href="#top">PRITESH SAHU</a><nav class="nav"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav></header>
-<main id="top">
-<section class="hero"><h1>VIDEO.<br>POST.<br>STORY.</h1><p class="hero-copy">Video Editor and Post Production Producer with 10+ years of experience across educational, research, corporate and creative video content.</p></section>
-<section class="work" id="work"><div class="label">Selected work</div><div class="grid">
-<a class="project featured" href="#" data-project="1"><div class="media"><img src="assets/project-1.jpg" alt="App video project"><span class="play">▶</span></div><div class="info"><div><div class="title">App Video — Explainer</div><div class="desc">Animated explainer focused on communicating a product idea clearly and simply.</div></div><div class="type">Editing / Motion</div></div></a>
-<a class="project" href="#" data-project="2"><div class="media"><img src="assets/project-2.jpg" alt="App benefit video"><span class="play">▶</span></div><div class="info"><div><div class="title">App Benefits Video</div><div class="desc">Educational product video combining animation, voice-over and visual storytelling.</div></div><div class="type">Video</div></div></a>
-<a class="project" href="#" data-project="3"><div class="media"><img src="assets/project-3.jpg" alt="App advertisement"><span class="play">▶</span></div><div class="info"><div><div class="title">App Ad</div><div class="desc">Short-form animated advertisement designed for quick communication and attention.</div></div><div class="type">Advertising</div></div></a>
-<a class="project" href="#" data-project="4"><div class="media"><img src="assets/project-4.jpg" alt="Avanti mission film"><span class="play">▶</span></div><div class="info"><div><div class="title">Avanti's Mission</div><div class="desc">Founder-led story for Avanti Learning Centres, combining interview and documentary-style visuals.</div></div><div class="type">Documentary</div></div></a>
-<a class="project" href="#" data-project="5"><div class="media"><img src="assets/project-5.jpg" alt="Happy Teachers Day video"><span class="play">▶</span></div><div class="info"><div><div class="title">Happy Teachers Day</div><div class="desc">A social-first piece created to celebrate teachers through a personal, human story.</div></div><div class="type">Social / Creative</div></div></a>
-<a class="project" href="#" data-project="6"><div class="media"><img src="assets/project-6.jpg" alt="Avanti journey film"><span class="play">▶</span></div><div class="info"><div><div class="title">Avanti — Our Journey</div><div class="desc">Seven-year journey film bringing together milestones, people and impact.</div></div><div class="type">Brand Film</div></div></a>
-<a class="project" href="#" data-project="7"><div class="media"><img src="assets/project-7.jpg" alt="India 2019 project"><span class="play">▶</span></div><div class="info"><div><div class="title">India 2019</div><div class="desc">A personal visual project exploring scale, movement and the energy of India.</div></div><div class="type">Creative</div></div></a>
-</div></section>
-<section class="about" id="about"><h2>MADE TO<br>COMMUNICATE.</h2><div><p>I work across editing and post-production, from shaping individual videos to coordinating workflows and teams at scale.</p><p>My work has included educational content, research videos, interviews, social content, animation-led explainers and large-scale video updates.</p></div></section>
-<section class="contact" id="contact"><h2>LET'S<br>WORK.</h2><div class="links"><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a><a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noopener">LinkedIn</a></div></section>
-</main><footer>© 2026 Pritesh Sahu</footer>
-<script>
-/* Replace the # in each project link with your YouTube/Vimeo/project URL later. */
-document.querySelectorAll('.project').forEach(card=>card.addEventListener('click',e=>{if(card.getAttribute('href')==='#')e.preventDefault();}));
-</script>
-</body></html>
+
+<header>
+  <div class="logo">PRITESH SAHU</div>
+
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+<section class="hero">
+
+  <h1>
+    Video.<br>
+    Post Production.<br>
+    Storytelling.
+  </h1>
+
+  <p>
+    Video Editor and Post Production Producer with 10+ years of experience
+    across editing, post-production and creative workflows.
+  </p>
+
+</section>
+
+
+<section class="work" id="work">
+
+  <div class="label">Selected Work</div>
+
+  <div class="grid">
+
+
+    <!-- APP AD -->
+
+    <div class="card featured">
+
+      <div class="media">
+        <div class="placeholder">
+          APP AD — VIDEO
+        </div>
+      </div>
+
+      <div class="info">
+        <div>
+          <div class="title">App Advertisement</div>
+          <div class="description">
+            Product-focused video created for an app campaign.
+          </div>
+        </div>
+
+        <div class="type">Video Editing</div>
+      </div>
+
+    </div>
+
+
+    <!-- APP BENEFIT -->
+
+    <div class="card">
+
+      <div class="media">
+        <div class="placeholder">
+          APP BENEFIT VIDEO
+        </div>
+      </div>
+
+      <div class="info">
+        <div>
+          <div class="title">App Benefits</div>
+          <div class="description">
+            Explainer and promotional content.
+          </div>
+        </div>
+
+        <div class="type">Post Production</div>
+      </div>
+
+    </div>
+
+
+    <!-- APP VIDEO -->
+
+    <div class="card">
+
+      <div class="media">
+        <div class="placeholder">
+          APP VIDEO
+        </div>
+      </div>
+
+      <div class="info">
+        <div>
+          <div class="title">App Video</div>
+          <div class="description">
+            Short-form product storytelling.
+          </div>
+        </div>
+
+        <div class="type">Editing</div>
+      </div>
+
+    </div>
+
+
+    <!-- AVANTI JOURNEY -->
+
+    <div class="card">
+
+      <div class="media">
+        <div class="placeholder">
+          AVANTI — OUR JOURNEY
+        </div>
+      </div>
+
+      <div class="info">
+        <div>
+          <div class="title">Avanti — Our Journey</div>
+          <div class="description">
+            Seven years of Avanti Learning Centres.
+          </div>
+        </div>
+
+        <div class="type">Documentary</div>
+      </div>
+
+    </div>
+
+
+    <!-- AVANTI MISSION -->
+
+    <div class="card">
+
+      <div class="media">
+        <div class="placeholder">
+          AVANTI — MISSION
+        </div>
+      </div>
+
+      <div class="info">
+        <div>
+          <div class="title">Avanti's Mission</div>
+          <div class="description">
+            Founder story and organisational mission.
+          </div>
+        </div>
+
+        <div class="type">Storytelling</div>
+      </div>
+
+    </div>
+
+
+    <!-- TEACHERS DAY -->
+
+    <div class="card">
+
+      <div class="media">
+        <div class="placeholder">
+          HAPPY TEACHERS DAY
+        </div>
+      </div>
+
+      <div class="info">
+        <div>
+          <div class="title">Happy Teachers Day</div>
+          <div class="description">
+            Creative social video.
+          </div>
+        </div>
+
+        <div class="type">Creative</div>
+      </div>
+
+    </div>
+
+
+    <!-- INDIA 2019 -->
+
+    <div class="card">
+
+      <div class="media">
+        <div class="placeholder">
+          INDIA 2019
+        </div>
+      </div>
+
+      <div class="info">
+        <div>
+          <div class="title">India 2019</div>
+          <div class="description">
+            Personal visual project.
+          </div>
+        </div>
+
+        <div class="type">Creative</div>
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+
+<section class="about" id="about">
+
+  <h2>
+    A little<br>
+    about me.
+  </h2>
+
+  <div>
+    <p>
+      I'm Pritesh Sahu, a video editor and post-production professional
+      with more than 10 years of experience creating and managing video
+      content.
+    </p>
+
+    <br>
+
+    <p>
+      My work spans educational content, research videos, corporate
+      storytelling, creative projects and large-scale post-production
+      workflows.
+    </p>
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <h2>
+    Let's<br>
+    work together.
+  </h2>
+
+  <div class="links">
+
+    <a href="mailto:YOUR_EMAIL@gmail.com">
+      Email
+    </a>
+
+    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank">
+      LinkedIn
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer>
+  © 2026 Pritesh Sahu
+</footer>
+
+</body>
+</html>
